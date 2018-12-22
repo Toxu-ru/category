@@ -1,5 +1,17 @@
 html:not(.mobile-view) body.navigation-categories {
-
+	
+.sidebar, .sidebar-right {
+	display: none;
+}
+.telo-qa {
+	width:100%;
+	border-left: none;
+	max-width: 90em;
+}
+.list-container.has-sidebar {
+    width: 100%;
+}
+	
 .h-home {
 	font-size: 14px;
 	color: #666;
