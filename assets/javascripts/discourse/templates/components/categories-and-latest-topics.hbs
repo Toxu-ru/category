@@ -1,17 +1,25 @@
-<div class='cat-cat'>
+<table class="h-table" border="0"><tr>
+  <td width="30%"  valign="top">
+  <div class="h-blog">  
+     {{mount-widget widget="post-category"  args=(hash listLoading=loading)}} 
+  </div>
+  </td>
+  <td width="50%" class="info-home" valign="top">
+      {{mount-widget widget="link-top"  args=(hash listLoading=loading)}}
+  </td>
+  <td width="20%"  valign="top"> 
+  <div class="blog-right">
+   Данная страница находится в стадии активного тестирования. 
+    
+  <div class="blog-1">Текстовый блог 1</div>
+  <div class="blog-2">Текстовый блог 2</div> 
+  <div class="blog-3">Текстовый блог 3</div> 
+  </div> 
+  </td>
+</tr></table> 
 
-<div class='colon cat-cat'>
-<h1 class="cat">Разделы</h1>	
-  {{categories-only-cat categories=categories}}
-</div>
-
-<div class='colon cat-post'>
-<div class='colon post'>
-	<div class="topic-list blog-ava">
-	{{mount-widget widget="link-top"  args=(hash listLoading=loading)}}
-	</div>
-	
-	{{latest-topic-list-cat topics=topics}}
-</div>
-</div>
-</div>
+<table width="100%"  class="h-table" > <tr>
+   <td width="39%" valign="top"> <div class="h-home">Блог</div>  <div class="category-list">{{categories-only-cat categories=categories}}</div> </td>
+   <td width="50px"> /</td> 
+   <td><div class="h-home">Последние вопросы</div> {{latest-topic-list-cat topics=topics}} </td>
+</tr></table>
