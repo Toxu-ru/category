@@ -21,7 +21,8 @@
 <div class="foot">
 
 <div class="stat">	
- {{category-link topic.category}} 	{{d-icon "comment-o"}} {{number topic.replyCount noTitle="true"}}  {{discourse-tags topic mode="list" tagsForUser=tagsForUser}} 
+ {{category-link topic.category}} 	{{d-icon "comment-o"}} {{number topic.replyCount noTitle="true"}}
+ &nbsp;  {{d-icon "heart-o"}}  {{number topic.like_count}}  {{discourse-tags topic mode="list" tagsForUser=tagsForUser}} 
 </div>
 
 </div>
