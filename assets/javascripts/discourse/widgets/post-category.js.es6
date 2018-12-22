@@ -11,7 +11,7 @@ export default createWidget('post-category', {
   let contents = []
 
   $.ajax({
-  url: "/c/7.json",
+  url: "/c/33.json",
   dataType: 'json',
   async: false,
   success: function(data) {
@@ -30,15 +30,10 @@ export default createWidget('post-category', {
  image_url = topics[t].image_url;
  
   contents.push( new RawHtml({ html: ` <div class="h-qa-bl"> 
-  
-  <img src="${image_url}" alt="Evg" class="logo-ava" width="100%"> <br>
-  <a class="b-title" href="/t/${slug}">${title}</a><div>  ${excerpt}</div></div>`})); 
-
- 
+    <img src="${image_url}" alt="Evg" class="logo-ava" width="100%"> <br>
+    <a class="b-title" href="/t/${slug}">${title}</a><div>  ${excerpt}</div></div>`})); 
   }
- 
- 
- }
+  }
  });
  return contents;
 }});
