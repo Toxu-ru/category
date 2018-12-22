@@ -105,27 +105,21 @@ a.b-title {
 	font-size: 16px;
 	color: #666;
 }
-.blog-1 {
-	background-color: #A1B56C;
+.blog-1, .blog-2, .blog-3 {
 	width: 90%;
 	margin-top: 20px;
 	padding: 7px 13px;
 	color:#fff;
+	font-size: 15px;
+}
+.blog-1 {
+	background-color: #A1B56C;
 }	
 .blog-2 {
 	background-color: #4fc3f7;
-	width: 90%;
-	margin-top: 20px;
-	padding: 7px 13px;
-	color:#fff;
 }
-	
 .blog-3 {
 	background-color: #e57373;
-	width: 90%;
-	margin-top: 20px;
-	padding: 7px 13px;
-	color:#fff;
 }	
 .cat-telo {
     width: 80%;
