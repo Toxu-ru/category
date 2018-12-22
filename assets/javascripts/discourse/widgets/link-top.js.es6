@@ -16,7 +16,7 @@ export default createWidget('link-top', {
   var ava;
  
   $.ajax({
-  url: "/top.json",
+  url: "/top/weekly.json",
   dataType: 'json',
   async: false,
   success: function(data) {
@@ -26,7 +26,7 @@ export default createWidget('link-top', {
  contents.push( new RawHtml({ html: ` <div class="h-home">${top_writers}</div>`})); 
   
  for (var t = 0; t < users.length; t++) {
- if(t > 8) break;  
+ if(t > 4) break;  
  username = users[t].username;
  ava = users[t].avatar_template;
  const avatar_template = ava.replace('{size}', '45');
