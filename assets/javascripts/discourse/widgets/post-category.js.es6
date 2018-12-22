@@ -30,7 +30,7 @@ export default createWidget('post-category', {
  image_url = topics[t].image_url;
  
   contents.push( new RawHtml({ html: ` <div class="h-qa-bl"> 
-    <img src="${image_url}" alt="Evg" class="logo-ava" width="100%"> <br>
+    <img src="${image_url}" alt="${title}" class="logo-ava" width="100%"> <br>
     <a class="b-title" href="/t/${slug}">${title}</a><div>  ${excerpt}</div></div>`})); 
   }
   }
