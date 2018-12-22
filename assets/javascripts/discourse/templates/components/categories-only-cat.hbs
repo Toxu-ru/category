@@ -1,32 +1,35 @@
 {{#if categories}}
 {{if showTopics 'with-topics'}}
-
+   
 {{#each categories as |c|}}
-<div class="cat-home">
+<div class="cat-glav">
+        
 <div class="cat-telo">
-<div class="cat-vn">
-	
 <a title="{{{dir-span c.name}}}" href="{{{dir-span c.url}}}">	
-     <div class="cat-title">{{{dir-span c.name}}}</div>  <div class="cat-num">{{{dir-span c.topic_count}}} </div> 
-	<img src="{{{dir-span c.categorimg}}}" alt="" class="logo-home">	
-     <div class="category-description">
-        {{{dir-span c.categordiscr}}} 
-     </div>
+<img src="{{{dir-span c.uploaded_logo.url}}}" alt="Раздел: {{{dir-span c.name}}}" class="logo-cat">	
+<div class="cat-title">{{{dir-span c.name}}}</div> 
 </a>	
-           {{#if c.subcategories}}
+      <div class="category-description">
+     {{{dir-span c.description_excerpt}}}   
+     </div>
+            {{#if c.subcategories}}
               <div class='subcategories'>
                       {{#each c.subcategories as |s|}}
                   <span class='subcategory'>
                     {{category-title-before category=s}}
-		            {{category-link s hideParent="true"}}
+                    {{category-link s hideParent="true"}}
                     {{category-unread category=s}}
                   </span>
                 {{/each}}    
+     
               </div>
-            {{/if}}	
-</div>	
-</div>
-<hr>
+            {{/if}}
+           
+    </div>
+    <div data-category-id={{c.id}}  class='topics'>1{{{c.stat}}}
+	<br>
+	<small>публикаций</small>
+	</div>
 </div>	
 {{/each}}
 {{/if}}
