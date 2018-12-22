@@ -1,6 +1,11 @@
 <div class='topic-cat  topic-list'>
 <div class='telohome'>
   
+<div class='avacat'>
+  {{#user-link user=topic.lastPoster}}{{avatar topic.lastPoster imageSize="large"}}{{/user-link}}
+</div>	
+	
+	
   <div class='title-t'> 
     {{raw "topic-status" topic=topic}}
     {{topic-link topic}}
@@ -11,19 +16,14 @@
   </div>
     {{format-date topic.bumpedAt format="tiny" noTitle="true"}}	
 	
-<div class='ava-t'>
-   <div class='avacat'>
-  {{#user-link user=topic.lastPoster}}{{avatar topic.lastPoster imageSize="large"}}{{/user-link}}
-   </div>
-   {{raw "list/topic-excerpt" topic=topic}}
-</div>
+ 
 
 <div class="foot">
-<div class="stat">	
-{{d-icon "comment-o"}} {{number topic.replyCount noTitle="true"}} {{discourse-tags topic mode="list" tagsForUser=tagsForUser}} 
- </div>
 
-<div class='date'>  {{category-link topic.category}}  </div>
+<div class="stat">	
+ {{category-link topic.category}} 	{{d-icon "comment-o"}} {{number topic.replyCount noTitle="true"}}  {{discourse-tags topic mode="list" tagsForUser=tagsForUser}} 
+</div>
+
 </div>
 </div>
 </div> 
