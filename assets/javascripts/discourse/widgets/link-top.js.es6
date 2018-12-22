@@ -16,7 +16,7 @@ export default createWidget('link-top', {
   var ava;
  
   $.ajax({
-  url: "/top/weekly.json",
+  url: "/top.json",
   dataType: 'json',
   async: false,
   success: function(data) {
@@ -25,38 +25,37 @@ export default createWidget('link-top', {
  
  contents.push( new RawHtml({ html: ` <div class="h-home">${top_writers}</div>`})); 
   
- 
  for (var t = 0; t < users.length; t++) {
- if(t >8) break;  
+ if(t > 8) break;  
  username = users[t].username;
  ava = users[t].avatar_template;
  const avatar_template = ava.replace('{size}', '45');
 
- contents.push( new RawHtml({ html: ` <div class="user-ava"><a href="u/${username}"><img src="${avatar_template}" alt="${username}" width="45" class="logo-ava"><br> ${username}</a></div>`})); 
+ contents.push( new RawHtml({ html: ` <div class="user-ava"><a href="u/${username}"><img src="${avatar_template}" alt="${username}" width="45" class="logo-ava"><br> 
+ <span class="h-u">${username}</span></a></div>`})); 
    
- }
+   }
  
-  contents.push( new RawHtml({ html: `<div class="h-home"><br />${best_theme}</div>`})); 
- 
+ contents.push( new RawHtml({ html: `<div class="h-home"><br />${best_theme}</div>`})); 
  
  var topics = data.topic_list.topics;
- var id;    
+ var id;  
  var title;
  var slug;
  
  for (var t = 0; t < topics.length; t++) {
- if(t >4) break;  
+ if(t > 4) break;  
  id = topics[t].id;  
  title = topics[t].title;
  slug = topics[t].slug;
  
-  contents.push( new RawHtml({ html: ` <div class="h-qa">${chevron}  <a href="/t/${slug}/${id}">${title}</a></div>`})); 
+   contents.push( new RawHtml({ html: `<div class="h-qa">${chevron}  <a href="/t/${slug}/${id}">${title}</a></div>`})); 
    
- 
-  }
- 
+   }
  
  }
  });
- return contents;
+    
+  return contents;
+
 }});
