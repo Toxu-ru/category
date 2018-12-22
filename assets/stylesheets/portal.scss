@@ -147,6 +147,13 @@ a.b-title {
     float: right;
 	color: #666;
 }	
-	
+
+a.b-title:hover, a:hover .h-u {
+	color: #f56400;
+	border-bottom: 1px dashed #f56400;
+}
+.badge-wrapper.bullet span.badge-category:hover, .title-t a.title:hover {
+    color: #f56400;
+}	
 	
 }
