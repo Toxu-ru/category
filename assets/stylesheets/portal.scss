@@ -100,12 +100,24 @@ a.b-title {
     font-size: 16px;
     color: #666;
 }
+.blog-0 { 
+	font-size: 15px;
+	.fa { 
+		color:#f56400; 
+		margin-right: 4px;
+	}	
+	
+}	
 .blog-1, .blog-2, .blog-3 {
     width: 90%;
     margin-top: 20px;
     padding: 7px 13px;
     color:#fff;
     font-size: 15px;
+	a {
+	color:#fff;
+	font-weight: 600;
+	}	
 }
 .blog-1 {
     background-color: #A1B56C;
