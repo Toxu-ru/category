@@ -26,12 +26,12 @@ export default createWidget('link-top', {
  contents.push( new RawHtml({ html: ` <div class="h-home">${top_writers}</div>`})); 
   
  for (var t = 0; t < users.length; t++) {
- if(t > 4) break;  
+ if(t > 6) break;  
  username = users[t].username;
  ava = users[t].avatar_template;
- const avatar_template = ava.replace('{size}', '45');
+ const avatar_template = ava.replace('{size}', '32');
 
- contents.push( new RawHtml({ html: ` <div class="user-ava"><a href="u/${username}"><img src="${avatar_template}" alt="${username}" width="45" class="logo-ava"><br> 
+ contents.push( new RawHtml({ html: ` <div class="user-ava"><a href="u/${username}"><img src="${avatar_template}" alt="${username}" width="32" class="logo-ava"><br> 
  <span class="h-u">${username}</span></a></div>`})); 
    
    }
