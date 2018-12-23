@@ -36,7 +36,7 @@ export default createWidget('link-top', {
    
    }
  
- contents.push( new RawHtml({ html: `<div class="h-home"><br />${best_theme}</div>`})); 
+ contents.push( new RawHtml({ html: `<div class="h-home"><br /><br />${best_theme}</div>`})); 
  
  var topics = data.topic_list.topics;
  var id;  
