@@ -57,12 +57,14 @@ a.b-title {
    display: inline-block;
 }
 .h-table {
-	margin-top: 20px;
+	margin-top: 15px;
     tr {
     	border-bottom: none;
     }
 }	
-	
+.h-table.plus {
+	margin-top: 30px;
+}	
 .avacat{
     float: left;
     margin-right: 10px;
