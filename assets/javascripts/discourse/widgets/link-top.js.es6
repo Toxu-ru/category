@@ -26,7 +26,7 @@ export default createWidget('link-top', {
  contents.push( new RawHtml({ html: ` <div class="h-home">${top_writers}</div>`})); 
   
  for (var t = 0; t < users.length; t++) {
- if(t > 6) break;  
+ if(t > 5) break;  
  username = users[t].username;
  ava = users[t].avatar_template;
  const avatar_template = ava.replace('{size}', '32');
