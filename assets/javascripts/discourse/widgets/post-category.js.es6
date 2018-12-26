@@ -17,6 +17,7 @@ export default createWidget('post-category', {
   success: function(data) {
     
  var topics = data.topic_list.topics;
+ var id; 
  var title;
  var slug;
  var excerpt;
@@ -24,6 +25,7 @@ export default createWidget('post-category', {
  
  for (var t = 0; t < topics.length; t++) {
  if(t >0) break;  
+ id = topics[t].id;  
  title = topics[t].title;
  slug = topics[t].slug;
  excerpt = topics[t].excerpt;
@@ -31,7 +33,7 @@ export default createWidget('post-category', {
  
   contents.push( new RawHtml({ html: ` <div class="h-qa-bl"> 
     <img src="${image_url}" alt="${title}" class="logo-blog" width="100%"> <br>
-    <a class="b-title" href="/t/${slug}">${title}</a><div>  ${excerpt}</div></div>`})); 
+    <a class="b-title" href="/t/${slug}/${id}">${title}</a><div>  ${excerpt}</div></div>`})); 
   }
   }
  });
