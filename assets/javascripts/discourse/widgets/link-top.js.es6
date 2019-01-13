@@ -14,6 +14,7 @@ export default createWidget('link-top', {
   var username;
   var avatar_template;
   var ava;
+  var length;
  
   $.ajax({
   url: "/top/weekly.json",
@@ -42,7 +43,8 @@ export default createWidget('link-top', {
  var id;  
  var title;
  var slug;
- 
+ var length;
+    
  for (var t = 0; t < topics.length; t++) {
  if(t > 4) break;  
  id = topics[t].id;  
